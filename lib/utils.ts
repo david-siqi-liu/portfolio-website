@@ -24,3 +24,10 @@ export const getErrorMessage = (error: unknown): string => {
 
   return message;
 };
+
+export const getYearsOfExp = (): number => {
+  const currDate = new Date();
+  const startDate = new Date(2018, 8, 1);
+  const timeDifference = currDate.getTime() - startDate.getTime();
+  return Math.ceil(timeDifference / (365.25 * 24 * 60 * 60 * 1000));
+};

@@ -1,15 +1,15 @@
 'use client';
 
+import { useTheme } from '@/context/theme-context';
+import { experiencesData } from '@/lib/data';
+import { useSectionInView } from '@/lib/hooks';
 import React from 'react';
-import SectionHeading from './section-heading';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { experiencesData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
-import { useTheme } from '@/context/theme-context';
+import SectionHeading from './section-heading';
 
 export default function Experience() {
   const { ref } = useSectionInView('Experience');
@@ -18,7 +18,7 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="" layout="1-column-left">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -44,11 +44,13 @@ export default function Experience() {
                 fontSize: '1.5rem',
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <h3 className="font-semibold">{item.title}</h3>
               <p className="!mt-0 font-normal">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              {item.description && (
+                <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                  {item.description}
+                </p>
+              )}
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
