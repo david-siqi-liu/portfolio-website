@@ -9,26 +9,32 @@ export const links = [
   {
     name: 'Home',
     hash: '#home',
+    visible: true,
   },
   {
     name: 'About',
     hash: '#about',
+    visible: true,
   },
-  // {
-  //   name: 'Projects',
-  //   hash: '#projects',
-  // },
-  // {
-  //   name: 'Skills',
-  //   hash: '#skills',
-  // },
+  {
+    name: 'Projects',
+    hash: '#projects',
+    visible: false,
+  },
+  {
+    name: 'Skills',
+    hash: '#skills',
+    visible: false,
+  },
   {
     name: 'Experience',
     hash: '#experience',
+    visible: true,
   },
   {
     name: 'Contact',
     hash: '#contact',
+    visible: true,
   },
 ] as const;
 
