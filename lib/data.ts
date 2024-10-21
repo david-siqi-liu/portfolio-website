@@ -40,11 +40,18 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: 'Senior Machine Learning Engineer',
+    location: 'Pinterest',
+    description: 'Build AutoML infra within Trust & Safety',
+    icon: React.createElement(CgWorkAlt),
+    date: '2024 - Present',
+  },
+  {
     title: 'Machine Learning Engineer',
     location: 'Amazon',
     description: 'Develop sponsored ads widgets on search pages',
     icon: React.createElement(CgWorkAlt),
-    date: '2023 - Present',
+    date: '2023 - 2024',
   },
   {
     title: 'Software Development Engineer',
