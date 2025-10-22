@@ -74,18 +74,6 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
-          href="#contact"
-          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
-          onClick={() => {
-            setActiveSection('Contact');
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me{' '}
-          <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
-        </Link>
-
         <a
           className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
           href="/resume.pdf"
